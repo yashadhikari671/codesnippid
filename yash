@@ -1,0 +1,23 @@
+<-------------------------------------------------for image display --------------------------------------------------------->
+<script>
+    function onimagechange(data, id) {
+
+        readURL(data, id);
+
+    }
+    function readURL(input, id) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+
+                var data = e.target.result;
+                $('#' + id).attr('src', e.target.result);
+                $('#' + id).removeAttr('hidden');
+
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    };
+</script>
+<------------------------------------------------------------------------------end------------------------------------>
