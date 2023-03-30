@@ -1,4 +1,6 @@
 <-------------------------------------------------for image display --------------------------------------------------------->
+ <input asp-for="ImagePath" type="file" accept=".png, .jpg, .jpeg" onchange="onimagechange(this,'Iconchange')" class="form-control">
+ <img id="Iconchange" src="" height="125" width="125" hidden>
 <script>
     function onimagechange(data, id) {
 
